@@ -1,0 +1,34 @@
+#ifndef MESSAGE_TYPES
+#define MESSAGE_TYPES
+
+#include <string>
+
+enum message_type
+{
+  Msg_SonTakeYourPocketMoney,
+  Msg_DinnerIsReady,
+  Msg_HiHoneyImHome,
+};
+
+
+inline std::string MsgToStr(int msg)
+{
+  switch (msg)
+  {
+  case Msg_SonTakeYourPocketMoney:
+    
+    return "¾Æµé, ¿ëµ· °èÁÂ·Î º¸³»³ù´Ù."; 
+
+  case Msg_DinnerIsReady:
+      return "Àú³á½Ä»ç ÁØºñ¿Ï·á µÆ¾î¿ä.";
+
+  case Msg_HiHoneyImHome:
+    return "¿©º¸ ´Ù³à¿Ô¾î";
+
+  default:
+
+    return "Not recognized!";
+  }
+}
+
+#endif
